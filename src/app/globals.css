@@ -40,3 +40,16 @@ a {
     color-scheme: dark;
   }
 }
+
+main,
+section {
+  position: relative;
+  padding: 6% 10%;
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,34 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  safelist: [
+    "bg-[rgb(255,56,75)]",
+    "bg-[rgb(111,77,177)]",
+    "bg-[rgb(255,180,60)]",
+    "bg-[rgb(8,123,245)]",
+    "bg-[rgb(78,78,78)]",
+    "bg-[rgb(208,97,144)]",
+    "bg-[rgb(8,177,205)]",
+    "bg-[rgb(134,45,101)]",
+    "bg-[rgb(133,88,63)]",
+  ],
+  theme: {
+    extend: {
+      animation: {
+        blink: "blink 1.5s step-end infinite",
+      },
+      keyframes: {
+        blink: {
+          "0%, 100%": { visibility: "visible" },
+          "50%": { visibility: "hidden" },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
