@@ -50,6 +50,24 @@ section {
   background-color: black;
 }
 
+@font-face {
+  font-family: "SB_Aggro_B";
+  src: url("/fonts/SB_Aggro_B.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SB_Aggro_M";
+  src: url("/fonts/SB_Aggro_M.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SB_Aggro_L";
+  src: url("/fonts/SB_Aggro_L.ttf") format("truetype");
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

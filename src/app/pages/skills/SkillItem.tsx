@@ -1,12 +1,12 @@
 import tw from "tailwind-styled-components";
-import { SkillType } from "../util/data/skillData";
+import { SkillType } from "../../util/data/skillData";
 
 interface skillProps {
   item: SkillType;
   index: number;
 }
 
-const SkillItemWrap = tw.div``;
+const SkillItemWrap = tw.article``;
 const SkillItemImg = tw.img`p-4 object-contain rounded-lg bg-white`;
 const SkillItemCaption = tw.h5`text-center font-semibold`;
 

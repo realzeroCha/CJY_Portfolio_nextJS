@@ -28,6 +28,11 @@ module.exports = {
           "50%": { visibility: "hidden" },
         },
       },
+      fontFamily: {
+        SB_Aggro_B: ["SB_Aggro_B", "sans-serif"],
+        SB_Aggro_M: ["SB_Aggro_M", "sans-serif"],
+        SB_Aggro_L: ["SB_Aggro_L", "sans-serif"],
+      },
     },
   },
   plugins: [],

@@ -37,6 +37,10 @@ export const skillList: SkillListType[] = [
         name: "Kotlin",
         url_path: "/images/svg/ic_kotlin.svg",
       },
+      {
+        name: "Dart",
+        url_path: "/images/svg/ic_dart.svg",
+      },
     ],
   },
   {
@@ -125,7 +129,7 @@ export const skillList: SkillListType[] = [
     ],
   },
   {
-    title: "etc",
+    title: "Communication",
     skills: [
       {
         name: "Figma",
