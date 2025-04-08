@@ -40,20 +40,22 @@ export const CareerList: CareerListType[] = [
               "차량 디스플레이 버전 드라이브스루 솔루션 웹 개발",
             description_period: "2023 하반기 - ",
             description_tags: ["React", "ccos", "STT/TTS"],
-            description_content: [],
+            description_content: [
+              "현대 자동차의 운영체제 ccos 기능을 활용하여 운영체제 내의 STT/TTS 기능 수행",
+              "범용성을 고려하여 Microsoft Azure의 STT/TTS을 적용한 버전 개발",
+              "Geolocation API를 연동하여 위치 데이터에 기반한 맞춤형 데이터 제공",
+            ],
           },
           {
             description_title:
               "웹 기반의 호텔 플랫폼 주문 접수 Windows POS 개발",
             description_period: "2024 상반기 -",
             description_tags: ["Tauri", "React"],
-            description_content: [],
-          },
-          {
-            description_title: "호텔 솔루션 관리자 웹페이지 개발",
-            description_period: "2024 상반기 - ",
-            description_tags: ["React"],
-            description_content: [],
+            description_content: [
+              "Web Socket을 사용한 주문 관리, 채팅 기능 개발",
+              "간단하게 주문을 확인할 수 있는 백그라운드 위젯 개발",
+              "외부 배달대행 플랫폼 API 연동 및 주문 매크로 개발",
+            ],
           },
           {
             description_title: "호텔 객실 스마트오더 솔루션 웹앱 개발",
@@ -65,19 +67,30 @@ export const CareerList: CareerListType[] = [
             description_title: "주문 접수 관리 솔루션 POS 개발",
             description_period: "2023 하반기 - ",
             description_tags: ["React-Native"],
-            description_content: [],
+            description_content: [
+              "realm을 사용하여 최소한의 서버 데이터 호출로 주문 주문 관리",
+              "VAN 결제모듈과 영수증 프린터를 앱과 연동하여 POS의 모든 기능을 수행",
+              "주문 및 결제 상태를 간편하게 확인할 수 있도록 주방 관리 시스템(KDS) 개발",
+            ],
           },
           {
             description_title: "Android TV DID 웹앱 개발",
             description_period: "2023 하반기 - 2024 하반기",
             description_tags: ["React-Native", "React", "WebView"],
-            description_content: [],
+            description_content: [
+              "리모콘 조작 및 포커싱 확인에 용이하도록 웹뷰 형태로 개발",
+              "realm과 소켓을 사용하여 최소한의 서버 데이터 호출로 주문 관리",
+            ],
           },
           {
             description_title: "사용자 개인 매장 웹페이지 개발",
             description_period: "2023 하반기",
             description_tags: ["React"],
-            description_content: [],
+            description_content: [
+              "Geolocation API를 연동하여 매장과 사용자의 거리를 측정, 최적화 데이터 제공",
+              "사용자가 백그라운드 상태에서도 정보를 제공받을 수 있도록 FCM 푸시 기능 개발",
+              "온라인 PG와 등록된 카드를 결제하는 빌링 결제를 통한 간편 결제 기능 개발",
+            ],
           },
         ],
       },

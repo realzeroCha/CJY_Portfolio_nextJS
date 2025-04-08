@@ -2,7 +2,7 @@ import Image from "next/image";
 import tw from "tailwind-styled-components";
 
 const SideButtonWrap = tw.div`fixed bottom-8 right-8 flex`;
-const LinkButton = tw.a`p-3 rounded-full bg-white cursor-pointer hover:bg-[#cecece]`;
+const LinkButton = tw.a`p-3 rounded-full bg-[#dddddd] cursor-pointer hover:bg-white`;
 
 const SideButton = () => {
   return (
