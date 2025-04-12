@@ -59,6 +59,10 @@ export const skillList: SkillListType[] = [
         url_path: "/images/svg/ic_nextJS.svg",
       },
       {
+        name: "Tauri",
+        url_path: "/images/svg/ic_tauri.svg",
+      },
+      {
         name: "Flutter",
         url_path: "/images/svg/ic_flutter.svg",
       },

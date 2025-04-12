@@ -2,6 +2,8 @@ import Image from "next/image";
 import tw from "tailwind-styled-components";
 import { CareerListType } from "../../util/data/careerData";
 import { RowWrap } from "../MainPage";
+import CareerDescription from "./CareerDescription";
+import CareerWork from "./CareerWork";
 
 interface CareerItemProps {
   item: CareerListType;
@@ -16,7 +18,6 @@ const CareerItemPeriod = tw.h5`text-[1rem] text-[#cecece]`;
 const CarerrItemTagWrap = tw.div`flex gap-2 flex-wrap`;
 const CareerItemTag = tw.p`px-3 py-0.5 text-[1rem] text-white font-semibold bg-[#228b22] rounded-[5]`;
 const CareerDescriptionWrap = tw.div`flex flex-col gap-2 m-2 px-4 border-l-[2px] border-[#cecece] break-words`;
-const CareerDescriptionText = tw.p`relative leading-loos pl-4 before:content-['•'] before:absolute before:left-0 before:top-0 text-[#cecece]`;
 
 const CareerItem = ({ item, index }: CareerItemProps) => {
   return (
@@ -46,13 +47,15 @@ const CareerItem = ({ item, index }: CareerItemProps) => {
           <CareerDescriptionWrap>
             {career.descriptions.map((description, description_idx) => {
               return typeof description === "string" ? (
-                <CareerDescriptionText
+                <CareerDescription
                   key={`${index}_${career_idx}_${description_idx}`}
-                >
-                  {description}
-                </CareerDescriptionText>
+                  description={description}
+                />
               ) : (
-                <div key={`${index}_${career_idx}_${description_idx}`}></div>
+                <CareerWork
+                  key={`${index}_${career_idx}_${description_idx}`}
+                  description={description}
+                ></CareerWork>
               );
             })}
           </CareerDescriptionWrap>

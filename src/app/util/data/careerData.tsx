@@ -61,7 +61,11 @@ export const CareerList: CareerListType[] = [
             description_title: "호텔 객실 스마트오더 솔루션 웹앱 개발",
             description_period: "2024 상반기 - ",
             description_tags: ["React-Native", "React", "WebView"],
-            description_content: [],
+            description_content: [
+              "VAN 결제모듈을 연동하여 단말기 내의 연결된 카드 리더기를 통한 결제 기능 수행",
+              "웹 소켓을 사용한 실시간 채팅 기능 및 알람 서비스 개발",
+              "기기의 펌웨어 기능을 네이티브 모듈로 제어하여 전원, 밝기 등의 하드웨어 조작 수행",
+            ],
           },
           {
             description_title: "주문 접수 관리 솔루션 POS 개발",
@@ -105,7 +109,7 @@ export const CareerList: CareerListType[] = [
         career_period: "2022.10 - 2023.05",
         tags: ["Front-end", "NextJS", "tailwindCSS"],
         descriptions: [
-          "ssr을 적용하여 검색엔진 최적화 및 초기 로딩 속도를 개선",
+          "서버 사이드 렌더링(SSR)을 적용하여 검색엔진 최적화 및 초기 로딩 속도를 개선",
         ],
       },
       {
