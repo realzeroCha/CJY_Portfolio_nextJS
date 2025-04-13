@@ -11,13 +11,13 @@ interface CareerItemProps {
 }
 
 const CareerListWrap = tw.div`flex flex-col gap-6`;
-const CareerTitle = tw.h2`text-[2rem] font-bold text-white font-SB_Aggro_M`;
-const CareerItemWrap = tw.article`flex flex-col gap-2 p-6 bg-[#222222] rounded-[10]`;
-const CareerItemTitle = tw.h3`text-[1.25rem] font-semibold`;
-const CareerItemPeriod = tw.h5`text-[1rem] text-[#cecece]`;
+const CareerTitle = tw.h2`text-[1.25rem] font-bold text-white font-SB_Aggro_M sm:text-[2rem]`;
+const CareerItemWrap = tw.article`flex flex-col gap-2 p-4 bg-[#222222] rounded-[10] sm:p-6`;
+const CareerItemTitle = tw.h3`text-[1rem] font-semibold sm:text-[1.25rem]`;
+const CareerItemPeriod = tw.h5`text-[0.8rem] text-[#cecece] sm:text-[1rem]`;
 const CarerrItemTagWrap = tw.div`flex gap-2 flex-wrap`;
-const CareerItemTag = tw.p`px-3 py-0.5 text-[1rem] text-white font-semibold bg-[#228b22] rounded-[5]`;
-const CareerDescriptionWrap = tw.div`flex flex-col gap-2 m-2 px-4 border-l-[2px] border-[#cecece] break-words`;
+const CareerItemTag = tw.p`px-3 py-0.5 text-[0.75rem] text-white font-semibold bg-[#228b22] rounded-[5] sm:text-[1rem]`;
+const CareerDescriptionWrap = tw.div`flex flex-col gap-2 m-1 px-3 border-l-[2px] border-[#cecece] break-words sm:m-2 sm:px-4`;
 
 const CareerItem = ({ item, index }: CareerItemProps) => {
   return (

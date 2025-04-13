@@ -4,9 +4,9 @@ import LibraryItem from "./LibraryItem";
 import SkillItem from "./SkillItem";
 import { SectionTitle } from "../MainPage";
 
-const SkillWrap = tw.div`my-8`;
-const SkillTitle = tw.h2`text-[2rem] pb-2 font-bold font-SB_Aggro_M`;
-const SkillListWrap = tw.div`flex flex-wrap gap-4`;
+const SkillWrap = tw.div`my-6 sm:my-8`;
+const SkillTitle = tw.h2`text-[1.25rem] pb-2 font-bold font-SB_Aggro_M sm:text-[2rem]`;
+const SkillListWrap = tw.div`flex flex-wrap gap-3 sm:gap-4`;
 const LibraryListWrap = tw.div`flex flex-wrap gap-2 py-4`;
 
 const Skills = () => {

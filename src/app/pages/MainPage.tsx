@@ -7,7 +7,7 @@ import Overview from "./Overview";
 import Skills from "./skills/Skills";
 import SideButton from "./SideButton";
 
-export const SectionTitle = tw.h1`w-full text-[2.5rem] font-bold text-white py-4 border-b-[2px] border-white font-SB_Aggro_B`;
+export const SectionTitle = tw.h1`w-full text-[1.5rem] font-bold text-white py-2 border-b-[2px] border-white font-SB_Aggro_B sm:text-[2.5rem] sm:py-4]`;
 export const RowWrap = tw.div`flex items-center gap-2`;
 const MainContainer = tw.div`relative h-[100dvh] overflow-y-auto scroll-smooth`;
 const Top = tw.div``;

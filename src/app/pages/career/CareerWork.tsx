@@ -2,9 +2,9 @@ import { DescriptionType } from "@/app/util/data/careerData";
 import tw from "tailwind-styled-components";
 
 const CareerWorkWrap = tw.details`flex flex-col gap-3`;
-const CareerWorkTitle = tw.summary`text-[1.25rem] font-semibold text-[#cecece] hover:text-white cursor-pointer`;
-const CareerWorkContentWrap = tw.div`flex flex-col gap-[6] pl-6 pb-4`;
-const CareerWorkContent = tw.p`text-[1rem] font-normal text-[#cecece]`;
+const CareerWorkTitle = tw.summary`text-[0.8rem] font-semibold text-[#cecece] hover:text-white cursor-pointer sm:text-[1.25rem]`;
+const CareerWorkContentWrap = tw.div`flex flex-col gap-2 pl-3 pb-4 sm:pl-6 sm:gap-3`;
+const CareerWorkContent = tw.p`text-[0.7rem] font-normal text-[#cecece] sm:text-[1rem]`;
 
 interface WorkProps {
   description: DescriptionType;

@@ -50,6 +50,13 @@ section {
   background-color: black;
 }
 
+@media (max-width: 640px) {
+  main,
+  section {
+    padding: 3rem 10%;
+  }
+}
+
 @font-face {
   font-family: "SB_Aggro_B";
   src: url("/fonts/SB_Aggro_B.ttf") format("truetype");
