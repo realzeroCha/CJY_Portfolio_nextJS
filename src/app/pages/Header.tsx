@@ -7,7 +7,7 @@ const HeaderNav = tw.nav`flex gap-8`;
 const HeaderContent = tw.a`cursor-pointer font-semibold text-gray-150 font-SB_Aggro_L hover:text-[#228b22]`;
 
 const Header = () => {
-  const sectionList = ["ABOUT", "SKILLS", "CAREER", "CONTACT"];
+  const sectionList = ["ABOUT", "SKILLS", "CAREER"];
 
   return (
     <HeaderContainer>
