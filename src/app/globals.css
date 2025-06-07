@@ -41,7 +41,6 @@ a {
   }
 }
 
-main,
 section {
   position: relative;
   padding: 6% 10%;
@@ -56,6 +55,8 @@ section {
     padding: 3rem 10%;
   }
 }
+
+/* fonts */
 
 @font-face {
   font-family: "SB_Aggro_B";
@@ -73,6 +74,21 @@ section {
   font-family: "SB_Aggro_L";
   src: url("/fonts/SB_Aggro_L.ttf") format("truetype");
   font-style: normal;
+}
+
+/* animation */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking {
+  animation: blink 1s step-start infinite;
 }
 
 @tailwind base;
