@@ -101,7 +101,7 @@ export const skillList: SkillListType[] = [
         color: "rgb(134,45,101)",
       },
       {
-        name: "Mocha",
+        name: "Jest",
         color: "rgb(133,88,63)",
       },
     ],

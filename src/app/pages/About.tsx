@@ -28,6 +28,15 @@ const About = () => {
             {aboutData.git_address}
             <LinkImage src={"/images/svg/ic_link.svg"} alt="link" />
           </AboutItemLink>
+          <AboutItemLink
+            href={aboutData.notion_address}
+            target="_blink"
+            rel="noopener noreferrer"
+          >
+            <AboutImage src={"/images/svg/ic_notion.svg"} alt="notion" />
+            {aboutData.notion_simple_address}
+            <LinkImage src={"/images/svg/ic_link.svg"} alt="link" />
+          </AboutItemLink>
           <AboutItem>
             <AboutImage src={"/images/svg/ic_mail.svg"} alt="email" />
             {aboutData.email}
