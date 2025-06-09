@@ -2,7 +2,8 @@ import tw from "tailwind-styled-components";
 import { skillList } from "../../util/data/skillData";
 import LibraryItem from "./LibraryItem";
 import SkillItem from "./SkillItem";
-import { SectionTitle } from "../MainPage";
+import { AreaLine, SectionTitle } from "../MainPage";
+import AnimatedText from "@/app/components/AnimatedView";
 
 const SkillWrap = tw.div`my-6 sm:my-8`;
 const SkillTitle = tw.h2`text-[1.25rem] pb-2 font-bold font-SB_Aggro_M sm:text-[2rem]`;
@@ -12,7 +13,10 @@ const LibraryListWrap = tw.div`flex flex-wrap gap-2 py-4`;
 const Skills = () => {
   return (
     <section id="skills">
-      <SectionTitle>SKILLS</SectionTitle>
+      <AnimatedText>
+        <SectionTitle>SKILLS</SectionTitle>
+      </AnimatedText>
+      <AreaLine />
       {skillList.map((category, index) => (
         <SkillWrap key={index}>
           <SkillTitle>{category.title}</SkillTitle>

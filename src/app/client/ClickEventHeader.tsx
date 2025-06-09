@@ -21,11 +21,15 @@ export const ClickEventHeader = () => {
     const careerBtn = document.getElementById("careerBtn");
     careerBtn?.addEventListener("click", () => scrollTo("career"));
 
+    const bottomBtn = document.getElementById("bottomBtn");
+    bottomBtn?.addEventListener("click", () => scrollTo("top"));
+
     return () => {
-      topBtn?.removeEventListener("click", () => scrollTo("overview"));
+      topBtn?.removeEventListener("click", () => scrollTo("top"));
       aboutBtn?.removeEventListener("click", () => scrollTo("about"));
       skillsBtn?.removeEventListener("click", () => scrollTo("skills"));
       careerBtn?.removeEventListener("click", () => scrollTo("career"));
+      bottomBtn?.removeEventListener("click", () => scrollTo("top"));
     };
   }, []);
 

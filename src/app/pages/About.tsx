@@ -1,6 +1,7 @@
 import tw from "tailwind-styled-components";
-import { SectionTitle } from "./MainPage";
+import { AreaLine, SectionTitle } from "./MainPage";
 import { aboutData } from "../util/data/aboutData";
+import AnimatedText from "../components/AnimatedView";
 
 const AboutWrap = tw.div`my-8 flex flex-col gap-3`;
 const AboutListWrap = tw.div`mt-6 flex gap-4 flex-wrap justify-center`;
@@ -13,7 +14,10 @@ const LinkImage = tw.img`ml-[-6px] w-3 h-3 sm:w-4 sm:h-4`;
 const About = () => {
   return (
     <section id="about">
-      <SectionTitle>ABOUT</SectionTitle>
+      <AnimatedText>
+        <SectionTitle>ABOUT</SectionTitle>
+      </AnimatedText>
+      <AreaLine />
       <AboutWrap>
         {aboutData.subtitle.map((subtitle: string, index: number) => (
           <AboutTitle key={index}>{subtitle}</AboutTitle>
