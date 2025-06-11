@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background: #f5f5f5;
   --foreground: #171717;
 }
 
@@ -46,7 +46,6 @@ section {
   padding: 6% 10%;
   width: 100%;
   height: auto;
-  background-color: black;
 }
 
 @media (max-width: 640px) {
@@ -57,7 +56,6 @@ section {
 }
 
 /* fonts */
-
 @font-face {
   font-family: "SB_Aggro_B";
   src: url("/fonts/SB_Aggro_B.ttf") format("truetype");

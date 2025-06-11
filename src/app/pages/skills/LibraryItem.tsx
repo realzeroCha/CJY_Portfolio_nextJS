@@ -10,7 +10,7 @@ interface LibraryItemProps {
   $bgColor: string;
 }
 
-const LibraryItemWrap = tw.article<LibraryItemProps>`px-3 py-1 rounded-lg font-semibold ${({
+const LibraryItemWrap = tw.article<LibraryItemProps>`text-white px-3 py-1 rounded-lg shadow-lg font-semibold ${({
   $bgColor,
 }) => `bg-[${$bgColor}]`}`;
 

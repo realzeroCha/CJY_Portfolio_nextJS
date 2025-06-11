@@ -39,10 +39,10 @@ export const CareerList: CareerListType[] = [
           {
             description_title:
               "관리자 웹페이지 및 어드민 백오피스 웹페이지 개발",
-            description_period: "2024 상반기 - 2025 상반기",
+            description_period: "2024 상반기 -",
             description_tags: ["React"],
             description_content: [
-              "웹 백그라운드 푸시 알림 구현",
+              "다양한 환경에서 사용감을 개선하기 위한 반응형 UI 개발",
               "사내 자동화 정산 데이터 시각적 통계 제공 및 Excel 추출 기능 개발",
             ],
           },
@@ -52,7 +52,6 @@ export const CareerList: CareerListType[] = [
             description_period: "2024 상반기",
             description_tags: ["React", "STT/TTS"],
             description_content: [
-              "국내 대기업 자동차 운영체제의 STT/TTS 기능 연동",
               "클라우드 기반 STT/TTS 백업 엔진을 적용하여 범용성 확보",
               "사용자의 현재 위치 데이터에 기반한 맞춤형 데이터 제공",
             ],
@@ -60,23 +59,22 @@ export const CareerList: CareerListType[] = [
           {
             description_title:
               "웹 기반의 호텔 플랫폼 주문 접수 Windows POS 개발",
-            description_period: "2024 상반기 - 2025 상반기",
+            description_period: "2024 상반기 -",
             description_tags: ["Tauri", "React"],
             description_content: [
-              "Web Socket을 사용한 채팅 기능 개발",
               "간단하게 주문을 확인할 수 있는 백그라운드 위젯 적용",
               "외부 배달대행 플랫폼 API 연동 및 주문 매크로 연동",
             ],
           },
           {
             description_title: "호텔 객실 스마트오더 솔루션 하이브리드 앱 개발",
-            description_period: "2024 상반기 - 2025 상반기",
+            description_period: "2024 상반기 -",
             description_tags: ["React-Native", "React", "WebView"],
             description_content: [
-              "VAN 결제모듈을 연동하여 연결된 카드 리더기를 통한 결제 기능 수행",
-              "웹 소켓을 사용한 실시간 채팅 기능 및 알람 서비스 개발",
+              "카드 리더기를 통한 결제 기능 개발",
+              "실시간 채팅 기능 및 알람 서비스 개발",
               "다국어 설정 기능 적용",
-              "기기 펌웨어 기능을 네이티브 모듈로 제어하여 기기의 하드웨어 조작 수행 기능 개발",
+              "기기의 하드웨어적 기능 제어 및 조작 기능 개발",
             ],
           },
           {
@@ -85,8 +83,6 @@ export const CareerList: CareerListType[] = [
             description_tags: ["React-Native"],
             description_content: [
               "로컬 DB를 활용하여 최소한의 서버 데이터 호출로 주문 주문 관리",
-              "VAN 결제모듈과 영수증 프린터를 앱과 연동하여 POS의 전체적 기능 수행",
-              "주문 및 결제 상태를 간편하게 확인할 수 있는 주방 관리 시스템 개발",
               "바코드 리더기 물리 키보드 등의 하드웨어 장비 연동 기능 개발",
             ],
           },
@@ -95,8 +91,7 @@ export const CareerList: CareerListType[] = [
             description_period: "2023 하반기 - 2024 상반기",
             description_tags: ["React-Native", "React", "WebView"],
             description_content: [
-              "리모콘 조작 및 포커싱 확인에 용이하도록 웹뷰 형태로 개발",
-              "로컬 DB와 웹소켓을 사용하여 최소한의 서버 데이터 호출로 주문 관리",
+              "웹뷰로 리뉴얼하여 리모콘 조작 사용감 및 업데이트 편의성 개선",
             ],
           },
           {
@@ -141,8 +136,8 @@ export const CareerList: CareerListType[] = [
         career_period: "2023.01 - 2023.03",
         tags: ["Front-end", "React-Native", "styled-components"],
         descriptions: [
-          "전화번호와 비밀번호를 입력받아 1회성 로그인 기능 구현",
-          "calendar와 moment를 사용하여 서버로부터 받은 date 값을 분석하여 예약기능 수행",
+          "예약 좌석을 시각적으로 보여주어 UI/UX 개선",
+          "서버로부터 제공된 예약 정보를 분석하여 예약 가능 시간을 시각적으로 제공",
         ],
       },
       {
