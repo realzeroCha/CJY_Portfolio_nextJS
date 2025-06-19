@@ -1,6 +1,6 @@
 import Image from "next/image";
 import tw from "tailwind-styled-components";
-import { CareerListType } from "../../util/data/careerData";
+import { CareerListType } from "../util/data/careerData";
 import { RowWrap } from "../MainPage";
 import CareerDescription from "./CareerDescription";
 import CareerWork from "./CareerWork";

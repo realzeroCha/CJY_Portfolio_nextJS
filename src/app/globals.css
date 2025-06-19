@@ -35,6 +35,11 @@ a {
   text-decoration: none;
 }
 
+/* dark mode */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

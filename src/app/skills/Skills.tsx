@@ -1,5 +1,5 @@
 import tw from "tailwind-styled-components";
-import { skillList } from "../../util/data/skillData";
+import { skillList } from "../util/data/skillData";
 import LibraryItem from "./LibraryItem";
 import SkillItem from "./SkillItem";
 import { AreaLine, SectionTitle } from "../MainPage";
