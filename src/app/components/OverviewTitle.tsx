@@ -2,8 +2,34 @@
 
 import tw from "tailwind-styled-components";
 import { useTypingEffect } from "../hooks/useTypingEffect";
+import { useAnimationEnd } from "../hooks/useAnimationEnd";
+import styled from "styled-components";
 
-const Title = tw.h1`h-fit text-[1.5rem] font-bold font-SB_Aggro_L sm:text-[2.75rem] lg:text-[3.75rem] relative translate-y-[15vh] sm:translate-y-[30vh]`;
+type TitleProps = {
+  $isEnd: boolean;
+};
+
+const Title = styled.div<TitleProps>`
+  height: "100%";
+  font-size: 6rem;
+  line-height: 7.2rem;
+  font-weight: 900;
+  color: ${(p) => (p.$isEnd ? "transparent" : "white")};
+  position: relative;
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR",
+    sans-serif;
+  -webkit-text-stroke: ${(p) => (p.$isEnd ? "1px" : "0px")}
+    ${({ theme }) => theme.text};
+
+  @media (max-width: 900px) {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  @media (max-width: 600px) {
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
+`;
 const Cursor = tw.span`inline-block w-[1ch] blinking`;
 
 interface OverviewTitleProps {
@@ -11,13 +37,15 @@ interface OverviewTitleProps {
   speed?: number;
 }
 
-const OverviewTitle = ({ text, speed = 120 }: OverviewTitleProps) => {
+const OverviewTitle = ({ text, speed = 100 }: OverviewTitleProps) => {
   const { displayText } = useTypingEffect(text, speed);
 
+  const isAnimatedEnd = useAnimationEnd(text, displayText);
+
   return (
-    <Title>
+    <Title $isEnd={isAnimatedEnd}>
       {displayText}
-      <Cursor>|</Cursor>
+      {!isAnimatedEnd && <Cursor>|</Cursor>}
     </Title>
   );
 };

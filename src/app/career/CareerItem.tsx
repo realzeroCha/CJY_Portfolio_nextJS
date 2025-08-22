@@ -15,8 +15,6 @@ const CareerTitle = tw.h2`text-[1.25rem] font-bold text-black dark:text-white fo
 const CareerItemWrap = tw.article`flex flex-col gap-2 p-2 bg-white dark:bg-[#222222] shadow-xl rounded-[10] sm:p-6`;
 const CareerItemTitle = tw.h3`text-[1rem] text-[#555555] dark:text-[#dedede] font-semibold sm:text-[1.25rem]`;
 const CareerItemPeriod = tw.h5`text-[0.8rem] text-[#999999] dark:text-[#cecece] sm:text-[1rem]`;
-const CarerrItemTagWrap = tw.div`flex gap-2 flex-wrap`;
-const CareerItemTag = tw.p`px-3 py-0.5 text-[0.75rem] text-white font-semibold bg-[#228b22] rounded-[5] sm:text-[1rem] shadow-md`;
 const CareerDescriptionWrap = tw.div`flex flex-col gap-2 m-1 px-3 border-l-2 border-[#777777] dark:border-[#cecece] break-words sm:m-2 sm:px-4`;
 
 const CareerItem = ({ item, index }: CareerItemProps) => {
@@ -36,14 +34,9 @@ const CareerItem = ({ item, index }: CareerItemProps) => {
             )}
             <CareerItemTitle>{career.career_title}</CareerItemTitle>
           </RowWrap>
-          <CareerItemPeriod>{career.career_period}</CareerItemPeriod>
-          <CarerrItemTagWrap>
-            {career.tags.map((tag, tag_idx) => (
-              <CareerItemTag key={`${index}_${career_idx}_${tag_idx}`}>
-                {tag}
-              </CareerItemTag>
-            ))}
-          </CarerrItemTagWrap>
+          {career.career_period && (
+            <CareerItemPeriod>{career.career_period}</CareerItemPeriod>
+          )}
           <CareerDescriptionWrap>
             {career.descriptions.map((description, description_idx) => {
               return typeof description === "string" ? (

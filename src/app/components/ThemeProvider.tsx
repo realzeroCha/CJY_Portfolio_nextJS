@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
+import { dark, light } from "../util/styles/ThemeStyle";
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDark, setIsDark] = useState(false);
@@ -22,9 +24,9 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <>
+    <StyledThemeProvider theme={isDark ? dark : light}>
       {hasMounted && <ThemeToggle toggle={toggleTheme} isDark={isDark} />}
       {children}
-    </>
+    </StyledThemeProvider>
   );
 };

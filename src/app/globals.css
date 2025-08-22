@@ -90,7 +90,7 @@ section {
   }
 }
 .blinking {
-  animation: blink 1s step-start infinite;
+  animation: blink 0.7s step-start infinite;
 }
 
 @keyframes slideIn {
