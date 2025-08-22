@@ -7,15 +7,16 @@ import styled from "styled-components";
 
 type TitleProps = {
   $isEnd: boolean;
+  $text: string;
 };
 
 const Title = styled.div<TitleProps>`
-  height: "100%";
+  position: relative;
+  width: 100%;
   font-size: 6rem;
   line-height: 7.2rem;
   font-weight: 900;
-  color: ${(p) => (p.$isEnd ? "transparent" : "white")};
-  position: relative;
+  color: ${(p) => (p.$isEnd ? "transparent" : `${({ theme }) => theme.text}`)};
   font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR",
     sans-serif;
   -webkit-text-stroke: ${(p) => (p.$isEnd ? "1px" : "0px")}
@@ -28,6 +29,24 @@ const Title = styled.div<TitleProps>`
   @media (max-width: 600px) {
     font-size: 3rem;
     line-height: 3.6rem;
+  }
+  &::before {
+    position: absolute;
+    top: 48%;
+    left: -0.5rem;
+    transform: translateY(-50%);
+    content: "${(p) => (p.$isEnd ? "FRONT-END\\A CHA JINYOUNG" : "")}";
+    -webkit-text-stroke: 1px red;
+    opacity: 0.4;
+  }
+  &::after {
+    position: absolute;
+    top: 52%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    content: "${(p) => (p.$isEnd ? "FRONT-END\\A CHA JINYOUNG" : "")}";
+    -webkit-text-stroke: 1px yellow;
+    opacity: 0.4;
   }
 `;
 const Cursor = tw.span`inline-block w-[1ch] blinking`;
@@ -43,7 +62,7 @@ const OverviewTitle = ({ text, speed = 100 }: OverviewTitleProps) => {
   const isAnimatedEnd = useAnimationEnd(text, displayText);
 
   return (
-    <Title $isEnd={isAnimatedEnd}>
+    <Title $isEnd={isAnimatedEnd} $text={text}>
       {displayText}
       {!isAnimatedEnd && <Cursor>|</Cursor>}
     </Title>

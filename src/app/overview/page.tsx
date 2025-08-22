@@ -3,7 +3,7 @@ import tw from "tailwind-styled-components";
 
 const title = "FRONT-END\nCHA JINYOUNG";
 
-const OverviewWrap = tw.main`relative flex h-[50vh] px-[10%] flex items-center whitespace-pre-line bg-black  sm:h-[80vh]`;
+const OverviewWrap = tw.main`relative flex h-[50vh] px-[10%] flex items-center whitespace-pre-line bg-black dark:bg-white  sm:h-[80vh]`;
 
 const Overview = () => {
   return (
