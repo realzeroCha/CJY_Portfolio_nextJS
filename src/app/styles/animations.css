@@ -1,0 +1,86 @@
+@keyframes lineMove1 {
+  0% {
+    transform: translate(-0.7rem, -4%);
+    -webkit-text-stroke: 2px blue;
+  }
+  25% {
+    transform: translate(0.7rem, 4%);
+    -webkit-text-stroke: 2px green;
+  }
+  0% {
+    transform: translate(0, -4%);
+    -webkit-text-stroke: 2px red;
+  }
+  75% {
+    transform: translate(0.7rem, -4%);
+    -webkit-text-stroke: 2px yellow;
+  }
+  100% {
+    transform: translate(-0.7rem, 4%);
+    -webkit-text-stroke: 2px red;
+  }
+}
+
+@keyframes lineMove2 {
+  0% {
+    transform: translate(0, -2%);
+    -webkit-text-stroke: 2px violet;
+  }
+  25% {
+    transform: translate(-0.5rem, -2%);
+    -webkit-text-stroke: 2px navy;
+  }
+  0% {
+    transform: translate(0.5rem, -0%);
+    -webkit-text-stroke: 2px green;
+  }
+  75% {
+    transform: translate(-0.5rem, 2%);
+    -webkit-text-stroke: 2px yellow;
+  }
+  100% {
+    transform: translate(-0.5rem, -2%);
+    -webkit-text-stroke: 2px blue;
+  }
+}
+
+@keyframes scatterGlitch {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0%) skew(0deg) rotate(0deg);
+    filter: blur(0px);
+  }
+  20% {
+    transform: translate(-5px, 0%) skew(-5deg) rotate(-2deg);
+    filter: blur(1px);
+  }
+  40% {
+    transform: translate(8px, 0%) skew(3deg) rotate(1deg);
+    filter: blur(2px);
+  }
+  60% {
+    transform: translate(-12px, 0%) skew(-8deg) rotate(-3deg);
+    filter: blur(3px);
+  }
+  80% {
+    transform: translate(20px, 0%) skew(4deg) rotate(2deg);
+    opacity: 0.6;
+    filter: blur(4px);
+  }
+  100% {
+    transform: translate(60px, 0%) skew(10deg) rotate(5deg);
+    opacity: 0;
+    filter: blur(6px);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

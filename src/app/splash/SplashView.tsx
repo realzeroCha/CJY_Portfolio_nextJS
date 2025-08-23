@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { SetStateAction, useEffect, useRef } from "react";
 import tw from "tailwind-styled-components";
 import * as THREE from "three";
 import gsap from "gsap";
@@ -6,7 +6,11 @@ import { GLTFLoader } from "three/examples/jsm/Addons.js";
 
 const SplashContiner = tw.div`relative w-[100vw] h-[100vh] bg-[#f8f8f8] dark:bg-[#171717]`;
 
-const SplashView = () => {
+export interface SplashProps {
+  setIsLoading: React.Dispatch<SetStateAction<boolean>>;
+}
+
+const SplashView = ({ setIsLoading }: SplashProps) => {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -97,7 +101,7 @@ const SplashView = () => {
               g: emissiveColor.g,
               b: emissiveColor.b,
               duration: 0.5,
-              delay: 2.5,
+              delay: 3,
               onUpdate: () => {
                 originalMaterial.needsUpdate = true;
               },
@@ -111,41 +115,12 @@ const SplashView = () => {
         y: 1,
         z: -1,
         duration: 1.5,
-        delay: 3,
+        delay: 3.5,
         ease: "power2.inOut",
+        onComplete: () => {
+          setIsLoading(false);
+        },
       });
-
-      // 📍 div 중앙 좌표 구하기
-      //   const rect = targetRef.current?.getBoundingClientRect();
-      //   if (rect) {
-      //     const centerX = rect.left + rect.width / 2;
-      //     const centerY = rect.top + rect.height / 2;
-
-      //     // 2D 좌표 → NDC(-1~1) 변환
-      //     const ndcX = (centerX / window.innerWidth) * 2 - 1;
-      //     const ndcY = -(centerY / window.innerHeight) * 2 + 1;
-
-      //     // NDC → 3D 좌표 (카메라 near plane 기준)
-      //     const targetVec = new THREE.Vector3(ndcX, ndcY, -0.5).unproject(camera);
-
-      //     // 4. GSAP 애니메이션으로 이동/축소
-      //     gsap.to(laptop.position, {
-      //       x: targetVec.x,
-      //       y: targetVec.y,
-      //       z: targetVec.z,
-      //       duration: 2.5,
-      //       delay: 2.5,
-      //       ease: "power2.inOut",
-      //     });
-
-      //     gsap.to(laptop.scale, {
-      //       x: 0.2,
-      //       y: 0.2,
-      //       z: 0.2,
-      //       duration: 2.5,
-      //       delay: 2.5,
-      //     });
-      //   }
     });
 
     const animate = () => {

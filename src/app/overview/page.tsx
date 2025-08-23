@@ -1,14 +1,15 @@
-import OverviewTitle from "@/app/components/OverviewTitle";
+import OverviewTitle from "@/app/overview/OverviewTitle";
 import tw from "tailwind-styled-components";
+import { SectionProps } from "../types/type";
 
 const title = "FRONT-END\nCHA JINYOUNG";
 
-const OverviewWrap = tw.main`relative flex h-[50vh] px-[10%] flex items-center whitespace-pre-line bg-black dark:bg-white  sm:h-[80vh]`;
+const OverviewWrap = tw.main`relative flex h-[50vh] px-[10%] flex  whitespace-pre-line sm:h-[80vh]`;
 
-const Overview = () => {
+const Overview = ({ isView }: SectionProps) => {
   return (
     <OverviewWrap id="overview">
-      <OverviewTitle text={title} />
+      <OverviewTitle text={title} isView={isView} />
     </OverviewWrap>
   );
 };
