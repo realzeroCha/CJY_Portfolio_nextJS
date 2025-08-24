@@ -1,6 +1,5 @@
 import { AreaLine, SectionTitle } from "../MainPage";
 import { aboutData } from "../../util/data/aboutData";
-import AnimatedText from "@/components/AnimatedView";
 import { SectionProps } from "@/types/type";
 import {
   AboutImage,
@@ -15,13 +14,17 @@ import {
 const About = ({ isView }: SectionProps) => {
   return (
     <section id="about">
-      <AnimatedText>
-        <SectionTitle>ABOUT</SectionTitle>
-      </AnimatedText>
+      <SectionTitle>ABOUT</SectionTitle>
       <AreaLine />
       <AboutWrap>
         {aboutData.subtitle.map((subtitle: string, index: number) => (
-          <AboutTitle key={index}>· {subtitle}</AboutTitle>
+          <AboutTitle
+            key={index}
+            $itemLength={aboutData.subtitle.length}
+            $index={index}
+          >
+            {subtitle}
+          </AboutTitle>
         ))}
         <AboutListWrap>
           <AboutItemLink

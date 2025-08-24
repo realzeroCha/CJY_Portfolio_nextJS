@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 // Overview 타이핑 애니메이션
 export const useTypingEffect = (text: string, speed: number) => {
   const [displayText, setDisplayText] = useState(
-    typeof window === "undefined" ? text : ""
+    typeof window === "undefined" ? "text" : ""
   );
 
   useEffect(() => {
