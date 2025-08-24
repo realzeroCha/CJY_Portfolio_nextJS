@@ -1,8 +1,8 @@
 import { AreaLine, SectionTitle } from "../MainPage";
-import { CareerList } from "../util/data/careerData";
+import { CareerList } from "../../util/data/careerData";
 import tw from "tailwind-styled-components";
 import Experiences from "./CareerItem";
-import AnimatedText from "@/app/components/AnimatedView";
+import AnimatedText from "../../components/AnimatedView";
 
 const CareerWrap = tw.div`flex flex-col py-8 gap-20`;
 

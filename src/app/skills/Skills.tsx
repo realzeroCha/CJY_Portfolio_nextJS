@@ -1,9 +1,9 @@
 import tw from "tailwind-styled-components";
-import { skillList } from "../util/data/skillData";
+import { skillList } from "../../util/data/skillData";
 import LibraryItem from "./LibraryItem";
 import SkillItem from "./SkillItem";
 import { AreaLine, SectionTitle } from "../MainPage";
-import AnimatedText from "@/app/components/AnimatedView";
+import AnimatedText from "../../components/AnimatedView";
 
 const SkillWrap = tw.div`my-6 sm:my-8`;
 const SkillTitle = tw.h2`text-[1.25rem] text-[#333333] dark:text-[#ededed] pb-2 font-bold font-SB_Aggro_M sm:text-[2rem]`;

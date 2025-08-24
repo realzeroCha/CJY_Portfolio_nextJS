@@ -1,5 +1,5 @@
 import tw from "tailwind-styled-components";
-import { SkillType } from "../util/data/skillData";
+import { SkillType } from "../../util/data/skillData";
 
 interface skillProps {
   item: SkillType;

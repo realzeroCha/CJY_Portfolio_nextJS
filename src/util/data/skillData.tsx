@@ -15,36 +15,24 @@ export type LibraryType = {
 
 export const skillList: SkillListType[] = [
   {
-    title: "Frontend",
+    title: "Language",
     skills: [
-      {
-        name: "JavaScript",
-        url_path: "/images/svg/ic_javascript.svg",
-      },
       {
         name: "TypeScript",
         url_path: "/images/svg/ic_typescript.svg",
-      },
-      {
-        name: "HTML",
-        url_path: "/images/svg/ic_html.svg",
-      },
-      {
-        name: "CSS",
-        url_path: "/images/svg/ic_css.svg",
       },
       {
         name: "Kotlin",
         url_path: "/images/svg/ic_kotlin.svg",
       },
       {
-        name: "Dart",
-        url_path: "/images/svg/ic_dart.svg",
+        name: "C++",
+        url_path: "/images/svg/ic_Cplus.svg",
       },
     ],
   },
   {
-    title: "",
+    title: "Frontend",
     skills: [
       {
         name: "React",
@@ -62,23 +50,15 @@ export const skillList: SkillListType[] = [
         name: "Tauri",
         url_path: "/images/svg/ic_tauri.svg",
       },
-      {
-        name: "Flutter",
-        url_path: "/images/svg/ic_flutter.svg",
-      },
     ],
     librarys: [
       {
-        name: "React-Query",
+        name: "Tanstack-Query",
         color: "rgb(255,56,75)",
       },
       {
         name: "Redux",
         color: "rgb(111,77,177)",
-      },
-      {
-        name: "Justand",
-        color: "rgb(255,180,60)",
       },
       {
         name: "Recoil",
@@ -89,10 +69,6 @@ export const skillList: SkillListType[] = [
         color: "rgb(78,78,78)",
       },
       {
-        name: "Sass",
-        color: "rgb(208,97,144)",
-      },
-      {
         name: "Tailwind CSS",
         color: "rgb(8,177,205)",
       },
@@ -101,21 +77,62 @@ export const skillList: SkillListType[] = [
         color: "rgb(134,45,101)",
       },
       {
+        name: "Sass",
+        color: "rgb(208,97,144)",
+      },
+      {
         name: "Jest",
+        color: "rgb(133,88,63)",
+      },
+      {
+        name: "React Testing Library",
+        color: "rgb(133,88,63)",
+      },
+      {
+        name: "Framer Motion",
+        color: "rgb(208,97,144)",
+      },
+      {
+        name: "Recharts",
+        color: "rgb(133,88,63)",
+      },
+      {
+        name: "Matter.js",
+        color: "rgb(133,88,63)",
+      },
+      {
+        name: "Three.js",
+        color: "rgb(133,88,63)",
+      },
+      {
+        name: "Cannon",
         color: "rgb(133,88,63)",
       },
     ],
   },
   {
-    title: "Backend\nDB",
+    title: "Backend",
     skills: [
       {
         name: "firebase",
         url_path: "/images/svg/ic_firebase.svg",
       },
       {
+        name: "express.js",
+        url_path: "/images/svg/ic_express.svg",
+      },
+    ],
+  },
+  {
+    title: "Database",
+    skills: [
+      {
         name: "MySQL",
-        url_path: "/images/svg/ic_mySQL.svg",
+        url_path: "/images/svg/ic_mysql.svg",
+      },
+      {
+        name: "Redis",
+        url_path: "/images/svg/ic_redis.svg",
       },
     ],
   },
@@ -133,15 +150,11 @@ export const skillList: SkillListType[] = [
     ],
   },
   {
-    title: "Communication",
+    title: "Design",
     skills: [
       {
         name: "Figma",
         url_path: "/images/svg/ic_figma.svg",
-      },
-      {
-        name: "Notion",
-        url_path: "/images/svg/ic_notion.svg",
       },
     ],
   },

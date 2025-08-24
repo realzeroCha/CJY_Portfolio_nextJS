@@ -8,8 +8,8 @@ export type AboutDataType = {
 };
 
 export const aboutData: AboutDataType = {
-  subtitle: ["Interactive", "Architecture", "Commnucation", "New Attempt"],
-  git_address: "https://github.com/Chajy39",
+  subtitle: ["New Attempt", "Interactive", "Architecture", "Commnucation"],
+  git_address: "https://github.com/realzeroCha",
   email: "labear52@gmail.com",
   notion_address:
     "https://wlsdud.notion.site/Wiki-1ee2bc32c77b8089bcd1ca5d80fbcf5d",

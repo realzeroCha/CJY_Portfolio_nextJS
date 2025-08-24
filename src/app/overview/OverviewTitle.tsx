@@ -1,8 +1,8 @@
 "use client";
 
 import tw from "tailwind-styled-components";
-import { useAnimationEnd } from "../hooks/useAnimationEnd";
-import { useTypingEffect } from "../hooks/useTypingEffect";
+import { useAnimationEnd } from "../../hooks/useAnimationEnd";
+import { useTypingEffect } from "../../hooks/useTypingEffect";
 import { Title } from "./styles";
 import { OverviewTitleProps } from "./types";
 

@@ -1,6 +1,6 @@
 import OverviewTitle from "@/app/overview/OverviewTitle";
 import tw from "tailwind-styled-components";
-import { SectionProps } from "../types/type";
+import { SectionProps } from "../../types/type";
 
 const title = "FRONT-END\nCHA JINYOUNG";
 

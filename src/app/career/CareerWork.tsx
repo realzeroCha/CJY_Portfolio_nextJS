@@ -1,4 +1,4 @@
-import { DescriptionType } from "@/app/util/data/careerData";
+import { DescriptionType } from "@/util/data/careerData";
 import tw from "tailwind-styled-components";
 
 const CareerWorkWrap = tw.div`flex flex-col gap-3`;

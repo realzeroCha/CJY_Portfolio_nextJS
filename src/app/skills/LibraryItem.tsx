@@ -1,5 +1,5 @@
 import tw from "tailwind-styled-components";
-import { LibraryType } from "../util/data/skillData";
+import { LibraryType } from "../../util/data/skillData";
 
 interface libraryProps {
   item: LibraryType;
