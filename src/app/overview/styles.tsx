@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { TitleProps } from "./types";
 
 export const Title = styled.div<TitleProps>`
@@ -23,8 +23,8 @@ export const Title = styled.div<TitleProps>`
       ${({ theme }) => theme.text};
   }
   @media (max-width: 640px) {
-    font-size: 2rem;
-    line-height: 2.4rem;
+    font-size: 2.4rem;
+    line-height: 3rem;
   }
   &::before {
     position: absolute;

@@ -1,4 +1,4 @@
-export type AboutTitleProps = {
+export type AboutTitleWrapProps = {
   $itemLength: number;
   $index: number;
 };

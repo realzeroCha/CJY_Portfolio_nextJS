@@ -85,36 +85,41 @@ const SplashView = ({ setIsLoading }: SplashProps) => {
       laptop.traverse((child) => {
         if (child instanceof THREE.Mesh && child.name === "Cube004_1") {
           const screenMesh = child as THREE.Mesh;
-          const originalMaterial = screenMesh.material;
 
-          if (originalMaterial instanceof THREE.MeshStandardMaterial) {
-            const emissiveColor = new THREE.Color(
-              originalMaterial.emissive.getHex()
-            );
+          const originalMaterial =
+            screenMesh.material as THREE.MeshStandardMaterial;
+          const originalMap = originalMaterial.map;
 
-            // turn off
-            originalMaterial.emissive.setHex(0x000000);
+          const blackMaterial = new THREE.MeshStandardMaterial({
+            color: 0x000000,
+            map: null,
+            emissive: new THREE.Color(0x000000),
+          });
 
-            // turn on
-            gsap.to(originalMaterial.emissive, {
-              r: emissiveColor.r,
-              g: emissiveColor.g,
-              b: emissiveColor.b,
+          // 일단 검정색 적용
+          screenMesh.material = blackMaterial;
+
+          gsap.to(
+            {},
+            {
               duration: 0.5,
-              delay: 3,
-              onUpdate: () => {
+              delay: 2.5,
+              onStart: () => {
+                originalMaterial.map = originalMap;
                 originalMaterial.needsUpdate = true;
+
+                screenMesh.material = originalMaterial;
               },
-            });
-          }
+            }
+          );
         }
       });
 
       gsap.to(camera.position, {
         x: 0,
-        y: 1,
-        z: -1,
-        duration: 1.5,
+        y: 1.05,
+        z: 1.75,
+        duration: 1.2,
         delay: 3.5,
         ease: "power2.inOut",
         onComplete: () => {

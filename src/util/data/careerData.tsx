@@ -67,19 +67,31 @@ export const CareerList: CareerListType[] = [
     title: "PROJECTS",
     careers: [
       {
+        career_title: "Dynamic-list",
+        url_path: null,
+        career_period: "2025.06 - 2025.08",
+        descriptions: [
+          "React 라이브러리",
+          "드래그 앤 드롭 기반의 동적인 변경이 가능한 리스트 제공",
+        ],
+      },
+      {
         career_title: "포트폴리오 웹페이지",
         url_path: null,
         career_period: "2025.05 - 2025.08",
-        descriptions: ["서버 사이드 렌더링(SSR)을 적용하여 검색엔진 최적화"],
+        descriptions: [
+          "서버 사이드 렌더링(SSR)을 적용하여 검색엔진 최적화",
+          "Three.js를 적용한 모델링 애니메이션 적용",
+        ],
       },
       {
-        career_title: "대학 통학 정보를 제공하는 크로스플랫폼 애플리케이션",
+        career_title: "대학 통학 정보를 제공하는 애플리케이션",
         url_path: null,
         career_period: "2022.10 - 2023.05",
         descriptions: [
           "메트로 OPEN API를 통해 실시간 교통 상황 제공",
-          "Google Maps API를 연동하여 정류장 위치를 시각적 데이터로 제공",
-          "WebSocket 기반 실시간 채팅 기능 개발",
+          "Google Maps API를 연동하여 지도 기반 데이터 제공",
+          "WebSocket 실시간 채팅 기능 개발",
         ],
       },
       {
@@ -88,7 +100,7 @@ export const CareerList: CareerListType[] = [
         career_period: "2023.01 - 2023.03",
         descriptions: [
           "예약 좌석을 시각적으로 보여주어 UI/UX 개선",
-          "서버로부터 제공된 예약 정보를 분석하여 예약 가능 시간을 시각적으로 제공",
+          "서버로부터 제공된 예약 가능 시간을 시각적으로 제공",
         ],
       },
       {
@@ -96,8 +108,8 @@ export const CareerList: CareerListType[] = [
         url_path: null,
         career_period: "2021.01 - 2022.10",
         descriptions: [
-          "YOLO AI를 통해 카메라 촬영 이미지 내 음식 데이터 검출 및 데이터 적용",
-          "다수의 사용자 데이터 통계를 가공, 필터링 데이터를 시각적 데이터로 제공",
+          "YOLO AI를 통해 이미지 음식 데이터 검출",
+          "데이터 통계를 시각적 데이터로 제공",
         ],
       },
     ],

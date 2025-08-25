@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ToggleWrap = styled.button`
   position: fixed;
-  top: 1.25rem;
+  top: 1rem;
   right: 2rem;
   width: 80px;
   height: fit-content;
@@ -20,8 +20,7 @@ export const ToggleWrap = styled.button`
   }
 
   @media (max-width: 640px) {
-    top: 1rem;
-    right: 1.5rem;
+    right: 0.5rem;
     width: 50px;
     font-size: 0.75rem;
     line-height: 1.4rem;
