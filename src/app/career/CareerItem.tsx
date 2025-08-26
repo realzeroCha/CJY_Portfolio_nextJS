@@ -1,14 +1,9 @@
 import Image from "next/image";
 import tw from "tailwind-styled-components";
-import { CareerListType } from "../../util/data/careerData";
 import CareerDescription from "./CareerDescription";
 import CareerWork from "./CareerWork";
 import { RowWrap } from "../mainPage/styles";
-
-interface CareerItemProps {
-  item: CareerListType;
-  index: number;
-}
+import { CareerList } from "@/util/data/careerData";
 
 const CareerListWrap = tw.div`flex flex-col gap-6`;
 const CareerTitle = tw.h2`text-[1.25rem] font-bold text-black dark:text-white font-SB_Aggro_M sm:text-[2rem]`;
@@ -17,12 +12,12 @@ const CareerItemTitle = tw.h3`text-[1rem] text-[#555555] dark:text-[#dedede] fon
 const CareerItemPeriod = tw.h5`text-[0.8rem] text-[#999999] dark:text-[#cecece] sm:text-[1rem]`;
 const CareerDescriptionWrap = tw.div`flex flex-col gap-2 m-1 px-3 border-l-2 border-[#777777] dark:border-[#cecece] break-words sm:m-2 sm:px-4`;
 
-const CareerItem = ({ item, index }: CareerItemProps) => {
+const CareerItem = () => {
   return (
-    <CareerListWrap key={index}>
-      <CareerTitle>{item.title}</CareerTitle>
-      {item.careers.map((career, career_idx) => (
-        <CareerItemWrap key={`${index}_${career_idx}`}>
+    <CareerListWrap>
+      <CareerTitle>{CareerList.title}</CareerTitle>
+      {CareerList.careers.map((career, career_idx) => (
+        <CareerItemWrap key={`${career.career_title}`}>
           <RowWrap>
             {career.url_path && (
               <Image
@@ -41,12 +36,12 @@ const CareerItem = ({ item, index }: CareerItemProps) => {
             {career.descriptions.map((description, description_idx) => {
               return typeof description === "string" ? (
                 <CareerDescription
-                  key={`${index}_${career_idx}_${description_idx}`}
+                  key={`${career_idx}_${description_idx}`}
                   description={description}
                 />
               ) : (
                 <CareerWork
-                  key={`${index}_${career_idx}_${description_idx}`}
+                  key={`${career_idx}_${description_idx}`}
                   description={description}
                 ></CareerWork>
               );

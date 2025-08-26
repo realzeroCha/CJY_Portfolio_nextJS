@@ -1,4 +1,3 @@
-import { CareerList } from "../../util/data/careerData";
 import tw from "tailwind-styled-components";
 import Experiences from "./CareerItem";
 import AnimatedText from "../../components/AnimatedView";
@@ -13,9 +12,7 @@ const Career = () => {
         <SectionTitle>CAREER</SectionTitle>
       </AnimatedText>
       <CareerWrap>
-        {CareerList.map((item, index) => (
-          <Experiences key={index} item={item} index={index} />
-        ))}
+        <Experiences />
       </CareerWrap>
     </section>
   );
