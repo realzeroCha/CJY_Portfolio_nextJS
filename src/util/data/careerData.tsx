@@ -52,8 +52,8 @@ export const CareerList: CareerListType = {
         {
           description_title: "성과 및 개선",
           description_content: [
-            "미디어 쿼리를 이용한 반응형 웹 구현 및 크로스 브라우징 테스트를 통한 유연성 향상",
-            "TanStack-Query 기반 상태 관리 및 아키텍처 재설계로 LCP·INP 성능 최적화",
+            "반응형 웹 구현 및 크로스 브라우징 테스트를 통한 유연성 향상",
+            "TanStack-Query 상태 관리, 아키텍처 재설계로 LCP·INP 성능 최적화",
             "Jest를 통한 테스트 개발 주도",
             "Google Analytics 등록 및 SEO 최적화",
           ],
