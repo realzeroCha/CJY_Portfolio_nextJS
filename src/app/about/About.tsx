@@ -1,4 +1,3 @@
-import { SectionProps } from "@/types/type";
 import { aboutData } from "../../util/data/aboutData";
 import {
   AboutImage,
@@ -13,7 +12,7 @@ import {
 } from "./styles";
 import { SectionTitle } from "../mainPage/styles";
 
-const About = ({ isView }: SectionProps) => {
+const About = () => {
   return (
     <section id="about">
       <SectionTitle>ABOUT</SectionTitle>
