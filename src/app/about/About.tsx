@@ -27,10 +27,6 @@ const About = ({ isView }: SectionProps) => {
           {aboutData.address}
         </AboutText>
         <AboutText>
-          <AboutTextImg src={"/images/svg/ic_phone.svg"} alt="phone" />
-          {aboutData.phoneNumber}
-        </AboutText>
-        <AboutText>
           <AboutTextImg src={"/images/svg/ic_education.svg"} alt="education" />
           {aboutData.education_info}
         </AboutText>

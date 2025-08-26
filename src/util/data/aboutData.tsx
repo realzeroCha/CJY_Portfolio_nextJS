@@ -1,7 +1,7 @@
 export type AboutDataType = {
   birth: string;
   address: string;
-  phoneNumber: string;
+  // phoneNumber: string;
   subtitle: string[];
   git_address: string;
   email: string;
@@ -13,7 +13,6 @@ export type AboutDataType = {
 export const aboutData: AboutDataType = {
   birth: "1998.01.07",
   address: "경기도 부천시",
-  phoneNumber: "010-9593-0309",
   education_info: "한국공학대학교 컴퓨터공학부 학사 (2017.03 - 2023.02)",
   subtitle: ["Challenge", "Interactive", "Architecture", "Comm"],
   git_address: "https://github.com/realzeroCha",
