@@ -1,24 +1,11 @@
-import styled from "styled-components";
 import tw from "tailwind-styled-components";
 
-export const SectionTitle = styled.h1`
-  position: relative;
-  width: 100%;
-  font-size: 3.5rem;
-  line-height: 4rem;
-  font-weight: 900;
-  padding-bottom: 6%;
-  color: transparent;
-  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR",
-    sans-serif;
-  -webkit-text-stroke: 2px ${({ theme }) => theme.text};
-  transition: color 1s ease;
-  z-index: 1;
-
-  @media (max-width: 640px) {
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-  }
+export const SectionTitle = tw.h1`
+  relative w-full text-7xl leading-[4rem] font-extrabold pb-[6%] text-transparent
+  font-['Apple_SD_Gothic_Neo','Malgun_Gothic','Noto_Sans_CJK_KR',sans-serif]
+  [-webkit-text-stroke:2px_black] dark:[-webkit-text-stroke:2px_white] transition-colors
+  duration-1000 ease-out z-10
+  sm:text-5xl sm:leading-[3.5rem]
 `;
 
 export const AreaLine = tw.div`w-full border-b-2 border-[#228b22] dark:border-white`;

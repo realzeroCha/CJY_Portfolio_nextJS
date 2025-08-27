@@ -46,7 +46,6 @@ export const CareerList: CareerListType = {
             "외부 배달대행 플랫폼 API 연동 및 주문 매크로 연동",
             "WebSocket, WebRTC 기반 실시간 통신 기능 개발",
             "위치 기반 데이터 제공, Excel 통계 추출 기능 개발",
-            "Google Analytics 등록 및 SEO 최적화",
           ],
         },
         {
@@ -55,7 +54,7 @@ export const CareerList: CareerListType = {
             "반응형 웹 구현 및 크로스 브라우징 테스트를 통한 유연성 향상",
             "TanStack-Query 상태 관리, 아키텍처 재설계로 LCP·INP 성능 최적화",
             "Jest를 통한 테스트 개발 주도",
-            "Google Analytics 등록 및 SEO 최적화",
+            "SEO 최적화 및 Google Analytics 등록·관리",
           ],
         },
       ],
