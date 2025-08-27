@@ -1,9 +1,13 @@
+import { CareerListType } from "@/util/data/careerData";
 import Image from "next/image";
 import tw from "tailwind-styled-components";
+import { RowWrap } from "../mainPage/styles";
 import CareerDescription from "./CareerDescription";
 import CareerWork from "./CareerWork";
-import { RowWrap } from "../mainPage/styles";
-import { CareerList } from "@/util/data/careerData";
+
+interface CareerItemProps {
+  list: CareerListType;
+}
 
 const CareerListWrap = tw.div`flex flex-col gap-6`;
 const CareerTitle = tw.h2`text-[1.25rem] font-bold text-black dark:text-white font-SB_Aggro_M sm:text-[2rem]`;
@@ -12,11 +16,11 @@ const CareerItemTitle = tw.h3`text-[1rem] text-[#555555] dark:text-[#dedede] fon
 const CareerItemPeriod = tw.h5`text-[0.8rem] text-[#999999] dark:text-[#cecece] sm:text-[1rem]`;
 const CareerDescriptionWrap = tw.div`flex flex-col gap-[10vh] px-3 pt-[10vh] pb-10 break-words sm:px-4 sm:gap-[20vh]`;
 
-const CareerItem = () => {
+const CareerItem = ({ list }: CareerItemProps) => {
   return (
     <CareerListWrap>
-      <CareerTitle>{CareerList.title}</CareerTitle>
-      {CareerList.careers.map((career, career_idx) => (
+      <CareerTitle>{list.title}</CareerTitle>
+      {list.careers.map((career, career_idx) => (
         <CareerItemWrap key={`${career.career_title}`}>
           <RowWrap>
             {career.url_path && (
