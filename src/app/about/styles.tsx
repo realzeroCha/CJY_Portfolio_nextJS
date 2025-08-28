@@ -23,51 +23,23 @@ export const AboutTitleWrap = styled.div<AboutTitleWrapProps>`
     margin-left: 0;
   }
 `;
-
 export const AboutTitle = tw.h3`
   grid place-items-center sm:w-[90%] py-2 mx-auto sm:aspect-square text-[1.5rem] font-SB_Aggro_B font-[500] text-center sm:text-[1.1rem] rounded-lg sm:rounded-full shadow-none sm:shadow-[0_0_10px_0px_#228b22] bg-white text-[#333333]
 `;
 
-export const AboutItemLink = styled.a`
-  position: relative;
-  background: #fff;
-  padding: 2px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px -1px #00000010;
-  transition: all 0.5s ease-in-out;
+export const AboutItemLink = tw.a`
+  group relative bg-white p-0.5 rounded-[10px] shadow-md transition-all duration-500 ease-in-out
+  before:content-[''] before:absolute before:rounded-[10px] before:z-10 before:w-full before:h-full
+  before:top-0 before:left-0 before:scale-x-0 before:origin-left
+  before:transition-transform before:duration-400 before:ease-in-out
+  before:[box-shadow:inset_4px_0px_0px_#228b22,inset_0px_4px_0px_#228b22]
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    transition: transform 0.4s ease;
-    border-radius: 10px;
-    z-index: 1;
-  }
+  after:content-[''] after:absolute after:rounded-[10px] after:z-10 after:w-full after:h-full
+  after:bottom-0 after:right-0 after:scale-x-0 after:origin-right
+  after:transition-transform after:duration-400 after:ease-in-out
+  after:[box-shadow:inset_-4px_0px_0px_#228b22,inset_0px_-4px_0px_#228b22]
 
-  &::before {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scaleX(0);
-    transform-origin: left;
-    box-shadow: inset 4px 0px 0px #228b22, inset 0px 4px 0px #228b22;
-  }
-  &::after {
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    transform: scaleX(0);
-    transform-origin: right;
-    box-shadow: inset -4px 0px 0px #228b22, inset 0px -4px 0px #228b22;
-  }
-
-  &:hover::before,
-  &:hover::after {
-    transform: scaleX(1);
-  }
+  hover:before:scale-x-100 hover:after:scale-x-100
 `;
 
 export const AboutTextWrap = tw.div`
@@ -75,16 +47,8 @@ export const AboutTextWrap = tw.div`
 `;
 
 export const AboutTextImg = tw.img`rounded-sm bg-white w-6 h-6 p-0.5 shadow-md`;
-export const AboutText = styled.p`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin: 0.5rem;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text};
-  font-family: "SB_Aggro_L";
+export const AboutText = tw.p`
+  flex items-center gap-2.5 text-[1rem]/[1.5rem] m-2 font-normal font-SB_Aggro_L text-black dark:text-white
 `;
 
 export const AboutImage = tw.img`rounded-md bg-white w-10 h-10 sm:w-14 sm:h-14 p-1`;

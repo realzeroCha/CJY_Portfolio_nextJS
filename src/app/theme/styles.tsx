@@ -23,6 +23,6 @@ export const ToggleWrap = styled.button`
     right: 0.5rem;
     width: 50px;
     font-size: 0.75rem;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
   }
 `;

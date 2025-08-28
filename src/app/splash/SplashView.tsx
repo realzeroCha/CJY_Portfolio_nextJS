@@ -14,6 +14,8 @@ const SplashView = ({ setIsLoading }: SplashProps) => {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       45,
@@ -25,7 +27,9 @@ const SplashView = ({ setIsLoading }: SplashProps) => {
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    mountRef.current?.appendChild(renderer.domElement);
+    if (mountRef.current && !mountRef.current.hasChildNodes()) {
+      mountRef.current?.appendChild(renderer.domElement);
+    }
 
     const light = new THREE.DirectionalLight(0xffffff, 2);
     light.position.set(1, 3, 3);

@@ -1,8 +1,9 @@
 import tw from "tailwind-styled-components";
-import Experiences from "./CareerItem";
 import AnimatedText from "../../components/AnimatedView";
 import { SectionTitle } from "../mainPage/styles";
 import { CareerList, ProjectList } from "@/util/data/careerData";
+import CareerItem from "./CareerItem";
+import ProjectItem from "./ProjectItem";
 
 const CareerWrap = tw.div`flex flex-col py-8 gap-20`;
 
@@ -13,8 +14,8 @@ const Career = () => {
         <SectionTitle>CAREER</SectionTitle>
       </AnimatedText>
       <CareerWrap>
-        <Experiences list={CareerList} />
-        <Experiences list={ProjectList} />
+        <CareerItem list={CareerList} />
+        <ProjectItem list={ProjectList} />
       </CareerWrap>
     </section>
   );
