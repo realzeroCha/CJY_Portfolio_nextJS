@@ -1,11 +1,9 @@
-import tw from "tailwind-styled-components";
+import { CareerList, ProjectList } from "@/util/data/careerData";
 import AnimatedText from "../../components/AnimatedView";
 import { SectionTitle } from "../mainPage/styles";
-import { CareerList, ProjectList } from "@/util/data/careerData";
 import CareerItem from "./CareerItem";
 import ProjectItem from "./ProjectItem";
-
-const CareerWrap = tw.div`flex flex-col py-8 gap-20`;
+import { CareerWrap } from "./styles";
 
 const Career = () => {
   return (

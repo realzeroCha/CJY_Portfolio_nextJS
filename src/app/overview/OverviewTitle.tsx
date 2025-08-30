@@ -1,12 +1,9 @@
 "use client";
 
-import tw from "tailwind-styled-components";
 import { useAnimationEnd } from "../../hooks/useAnimationEnd";
 import { useTypingEffect } from "../../hooks/useTypingEffect";
-import { Title } from "./styles";
+import { Cursor, Title } from "./styles";
 import { OverviewTitleProps } from "./types";
-
-const Cursor = tw.span`inline-block w-[1ch] blinking`;
 
 const OverviewTitle = ({ text, speed = 100 }: OverviewTitleProps) => {
   const { displayText } = useTypingEffect(text, speed);

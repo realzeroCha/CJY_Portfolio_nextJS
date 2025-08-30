@@ -1,18 +1,5 @@
-import tw from "tailwind-styled-components";
-import { LibraryType } from "../../util/data/skillData";
-
-interface libraryProps {
-  item: LibraryType;
-  index: number;
-}
-
-interface LibraryItemProps {
-  $bgColor: string;
-}
-
-const LibraryItemWrap = tw.article<LibraryItemProps>`text-white px-3 py-1 rounded-lg shadow-lg font-semibold ${({
-  $bgColor,
-}) => `bg-[${$bgColor}]`}`;
+import { LibraryItemWrap } from "./styles";
+import { libraryProps } from "./types";
 
 const LibraryItem = ({ item, index }: libraryProps) => {
   return (

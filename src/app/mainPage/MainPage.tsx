@@ -3,8 +3,8 @@
 import { useState } from "react";
 import About from "../about/About";
 import Career from "../career/Career";
-import { ClickEventHeader } from "../client/ClickEventHeader";
-import Footer from "../Footer";
+import { ClickEventHeader } from "../header/client/ClickEventHeader";
+import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import Overview from "../overview/page";
 import Skills from "../skills/Skills";

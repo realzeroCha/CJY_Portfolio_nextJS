@@ -1,14 +1,14 @@
-import tw from "tailwind-styled-components";
+import AnimatedText from "../../components/AnimatedView";
 import { skillList } from "../../util/data/skillData";
+import { SectionTitle } from "../mainPage/styles";
 import LibraryItem from "./LibraryItem";
 import SkillItem from "./SkillItem";
-import AnimatedText from "../../components/AnimatedView";
-import { SectionTitle } from "../mainPage/styles";
-
-const SkillWrap = tw.div`my-6 sm:my-8`;
-const SkillTitle = tw.h2`text-[1.25rem] text-[#333333] dark:text-[#ededed] pb-2 font-bold font-SB_Aggro_M sm:text-[2rem]`;
-const SkillListWrap = tw.div`flex flex-wrap gap-3 sm:gap-4`;
-const LibraryListWrap = tw.div`flex flex-wrap gap-2 py-4`;
+import {
+  LibraryListWrap,
+  SkillListWrap,
+  SkillTitle,
+  SkillWrap,
+} from "./styles";
 
 const Skills = () => {
   return (

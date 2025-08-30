@@ -1,19 +1,15 @@
-import { CareerListType } from "@/util/data/careerData";
 import Image from "next/image";
-import tw from "tailwind-styled-components";
 import { RowWrap } from "../mainPage/styles";
 import CareerDescription from "./CareerDescription";
-
-interface CareerItemProps {
-  list: CareerListType;
-}
-
-const CareerListWrap = tw.div`flex flex-col gap-6`;
-const CareerTitle = tw.h2`text-[1.25rem] font-bold text-black dark:text-white font-SB_Aggro_M sm:text-[2rem]`;
-const CareerItemWrap = tw.article`flex flex-col gap-2 p-3 bg-white dark:bg-[#222222] shadow-xl rounded-[10] sm:p-6`;
-const CareerItemTitle = tw.h3`text-[1rem] text-[#555555] dark:text-[#dedede] font-semibold sm:text-[1.25rem]`;
-const CareerItemPeriod = tw.h5`text-[0.8rem] text-[#999999] dark:text-[#cecece] sm:text-[1rem]`;
-const CareerDescriptionWrap = tw.div`flex flex-col gap-2 m-1 px-3 break-words sm:px-4`;
+import {
+  CareerItemPeriod,
+  CareerItemTitle,
+  CareerItemWrap,
+  CareerListWrap,
+  CareerTitle,
+  ProjectDescriptionWrap,
+} from "./styles";
+import { CareerItemProps } from "./types";
 
 const ProjectItem = ({ list }: CareerItemProps) => {
   return (
@@ -35,7 +31,7 @@ const ProjectItem = ({ list }: CareerItemProps) => {
           {career.career_period && (
             <CareerItemPeriod>{career.career_period}</CareerItemPeriod>
           )}
-          <CareerDescriptionWrap>
+          <ProjectDescriptionWrap>
             {career.descriptions.map((description, description_idx) => {
               return (
                 typeof description === "string" && (
@@ -46,7 +42,7 @@ const ProjectItem = ({ list }: CareerItemProps) => {
                 )
               );
             })}
-          </CareerDescriptionWrap>
+          </ProjectDescriptionWrap>
         </CareerItemWrap>
       ))}
     </CareerListWrap>

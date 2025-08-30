@@ -2,8 +2,8 @@ import styled from "styled-components";
 import tw from "tailwind-styled-components";
 import { AboutTitleWrapProps } from "./types";
 
-export const AboutWrap = tw.div`my-8 flex flex-col gap-2`;
-export const AboutListWrap = tw.div`mb-[30%] flex gap-4`;
+export const AboutWrap = tw.div`my-8 flex flex-col gap-2 mx-[8%] sm:mx-4`;
+export const AboutListWrap = tw.div`mb-[30%] flex gap-4 space`;
 
 export const AboutTitleWrap = styled.div<AboutTitleWrapProps>`
   position: sticky;
@@ -24,7 +24,7 @@ export const AboutTitleWrap = styled.div<AboutTitleWrapProps>`
   }
 `;
 export const AboutTitle = tw.h3`
-  grid place-items-center sm:w-[90%] py-2 mx-auto sm:aspect-square text-[1.5rem] font-SB_Aggro_B font-[500] text-center sm:text-[1.1rem] rounded-lg sm:rounded-full shadow-none sm:shadow-[0_0_10px_0px_#228b22] bg-white text-[#333333]
+  grid place-items-center sm:w-[90%] py-2 mx-auto sm:aspect-square text-center rounded-lg sm:rounded-full shadow-none sm:shadow-[0_0_10px_0px_#228b22] bg-white
 `;
 
 export const AboutItemLink = tw.a`
@@ -43,7 +43,7 @@ export const AboutItemLink = tw.a`
 `;
 
 export const AboutTextWrap = tw.div`
-  flex flex-col my-6
+  flex flex-col my-6 space
 `;
 
 export const AboutTextImg = tw.img`rounded-sm bg-white w-6 h-6 p-0.5 shadow-md`;

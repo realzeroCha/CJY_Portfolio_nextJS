@@ -1,20 +1,16 @@
-import { CareerListType } from "@/util/data/careerData";
 import Image from "next/image";
-import tw from "tailwind-styled-components";
 import { RowWrap } from "../mainPage/styles";
 import CareerDescription from "./CareerDescription";
 import CareerWork from "./CareerWork";
-
-interface CareerItemProps {
-  list: CareerListType;
-}
-
-const CareerListWrap = tw.div`flex flex-col gap-6`;
-const CareerTitle = tw.h2`text-[1.25rem] font-bold text-black dark:text-white font-SB_Aggro_M sm:text-[2rem]`;
-const CareerItemWrap = tw.article`flex flex-col gap-2 p-2 bg-white dark:bg-[#222222] shadow-xl rounded-[10] sm:p-6`;
-const CareerItemTitle = tw.h3`text-[1rem] text-[#555555] dark:text-[#dedede] font-semibold sm:text-[1.25rem]`;
-const CareerItemPeriod = tw.h5`text-[0.8rem] text-[#999999] dark:text-[#cecece] sm:text-[1rem]`;
-const CareerDescriptionWrap = tw.div`flex flex-col gap-[10vh] px-3 pt-[10vh] pb-10 break-words sm:px-4 sm:gap-[20vh]`;
+import {
+  CareerDescriptionWrap,
+  CareerItemPeriod,
+  CareerItemTitle,
+  CareerItemWrap,
+  CareerListWrap,
+  CareerTitle,
+} from "./styles";
+import { CareerItemProps } from "./types";
 
 const CareerItem = ({ list }: CareerItemProps) => {
   return (

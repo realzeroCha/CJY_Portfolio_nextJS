@@ -1,12 +1,17 @@
 import styled from "styled-components";
 import { TitleProps } from "./types";
+import tw from "tailwind-styled-components";
 
-export const Title = styled.div<TitleProps>`
+// page
+export const OverviewWrap = tw.main`relative flex h-[50vh] whitespace-pre-line sm:h-[80vh] space`;
+
+// OverviewTitle
+export const Cursor = tw.span`inline-block w-[1ch] blinking`;
+
+export const Title = styled.h1<TitleProps>`
   position: relative;
   width: 100%;
   margin-top: 20%;
-  font-size: 6rem;
-  line-height: 7.2rem;
   font-weight: 900;
   color: ${(p) => (p.$isEnd ? "transparent" : p.theme.text)};
   font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR",
@@ -17,15 +22,10 @@ export const Title = styled.div<TitleProps>`
   z-index: 1;
 
   @media (max-width: 900px) {
-    font-size: 4rem;
-    line-height: 5rem;
     -webkit-text-stroke: ${(p) => (p.$isEnd ? "2px" : "0px")}
       ${({ theme }) => theme.text};
   }
-  @media (max-width: 640px) {
-    font-size: 2.4rem;
-    line-height: 3rem;
-  }
+
   &::before {
     position: absolute;
     left: -0.5rem;
