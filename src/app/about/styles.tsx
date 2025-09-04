@@ -12,7 +12,8 @@ export const AboutTitleWrap = styled.div<AboutTitleWrapProps>`
     return `${(p.$index / p.$itemLength) * 100}%`;
   }};
   width: 25%;
-  height: 50vh;
+  aspect-ratio: 1/1;
+  margin-bottom: 30%;
 
   @media (max-width: 640px) {
     width: auto;

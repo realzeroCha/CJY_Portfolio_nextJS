@@ -82,31 +82,31 @@ export const skillList: SkillListType[] = [
       },
       {
         name: "Jest",
-        color: "rgb(133,88,63)",
+        color: "rgb(194,19,37)",
       },
       {
         name: "React Testing Library",
-        color: "rgb(133,88,63)",
+        color: "rgb(236,89,144)",
       },
       {
         name: "Framer Motion",
-        color: "rgb(208,97,144)",
+        color: "rgb(0,85,255)",
       },
       {
         name: "Recharts",
-        color: "rgb(133,88,63)",
+        color: "rgb(255,99,132)",
       },
       {
         name: "Matter.js",
-        color: "rgb(133,88,63)",
+        color: "rgb(75,85,98)",
       },
       {
         name: "Three.js",
-        color: "rgb(133,88,63)",
+        color: "rgb(0,0,0)",
       },
       {
         name: "Cannon",
-        color: "rgb(133,88,63)",
+        color: "rgb(59,164,183)",
       },
     ],
   },
