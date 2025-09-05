@@ -122,7 +122,7 @@ const SplashView = ({ setIsLoading }: SplashProps) => {
       gsap.to(camera.position, {
         x: 0,
         y: 1.05,
-        z: 1,
+        z: 0.5,
         duration: 1.2,
         delay: 3.5,
         ease: "power2.inOut",
