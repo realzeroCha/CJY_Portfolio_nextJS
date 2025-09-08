@@ -12,7 +12,9 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     setIsDark(false);
     document.documentElement.classList.toggle("dark", false);
-    setHasMounted(true);
+    setTimeout(() => {
+      setHasMounted(true);
+    }, 5000);
   }, []);
 
   const toggleTheme = () => {

@@ -1,3 +1,3 @@
 import tw from "tailwind-styled-components";
 
-export const FooterConatiner = tw.footer`text-center py-[10%] text-white bg-[#0a0a0a] dark:bg-black text-[0.75rem] sm:py-[4%] sm:text-[1rem]`;
+export const FooterConatiner = tw.footer`text-center py-10 text-white bg-[#0a0a0a] dark:bg-black text-[0.75rem] sm:text-[1rem]`;

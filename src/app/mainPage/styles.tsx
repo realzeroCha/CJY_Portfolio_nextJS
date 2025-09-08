@@ -8,4 +8,4 @@ export const SectionTitle = tw.h2`
 
 export const AreaLine = tw.div`w-full border-b-2 border-[#228b22] dark:border-white`;
 export const RowWrap = tw.div`flex items-center gap-2`;
-export const MainContainer = tw.div`relative h-[100dvh] overflow-y-auto scroll-smooth bg-[#f8f8f8] dark:bg-[#171717]`;
+export const MainContainer = tw.div`relative h-[100dvh] overflow-y-auto scroll-smooth bg-[#fbfbfb] dark:bg-[#171717]`;

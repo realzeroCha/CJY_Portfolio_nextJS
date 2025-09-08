@@ -8,14 +8,10 @@ import {
 import { WorkProps } from "./types";
 
 const CareerWork = ({ description, index }: WorkProps) => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(true);
   const careerWorkRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      setIsVisible(true);
-      return;
-    }
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

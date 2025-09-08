@@ -55,11 +55,7 @@ const About = () => {
       </AboutListWrap>
       <AboutWrap>
         {aboutData.subtitle.map((subtitle: string, index: number) => (
-          <AboutTitleWrap
-            key={index}
-            $itemLength={aboutData.subtitle.length}
-            $index={index}
-          >
+          <AboutTitleWrap key={index} $index={index}>
             <AboutTitle>{subtitle}</AboutTitle>
           </AboutTitleWrap>
         ))}

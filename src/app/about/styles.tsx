@@ -1,28 +1,20 @@
-import styled from "styled-components";
 import tw from "tailwind-styled-components";
 import { AboutTitleWrapProps } from "./types";
 
 export const AboutWrap = tw.div`my-8 flex flex-col gap-2 mx-[8%] sm:mx-4`;
 export const AboutListWrap = tw.div`mb-[30%] flex gap-4 space`;
 
-export const AboutTitleWrap = styled.div<AboutTitleWrapProps>`
-  position: sticky;
-  top: 20rem;
-  margin-left: ${(p) => {
-    return `${(p.$index / p.$itemLength) * 100}%`;
-  }};
-  width: 25%;
-  aspect-ratio: 1/1;
-  margin-bottom: 30%;
-
-  @media (max-width: 640px) {
-    width: auto;
-    height: 40vh;
-    top: ${(p) => {
-      return `${p.$index * 4 + 6}rem`;
-    }};
-    margin-left: 0;
-  }
+export const AboutTitleWrap = tw.div<AboutTitleWrapProps>`
+  sticky width-auto h-[40vh] ml-0
+  sm:w-1/4 sm:h-auto sm:aspect-[1/1] sm:top-60 sm:mb-[30%]
+  ${(p) =>
+    p.$index === 0
+      ? "top-[6rem] sm:ml-[0]"
+      : p.$index === 1
+      ? "top-[10rem] sm:ml-[25%]"
+      : p.$index === 2
+      ? "top-[14rem] sm:ml-[50%]"
+      : "top-[18rem] sm:ml-[75%]"}
 `;
 export const AboutTitle = tw.h3`
   grid place-items-center sm:w-[90%] py-2 mx-auto sm:aspect-square text-center rounded-lg sm:rounded-full shadow-none sm:shadow-[0_0_10px_0px_#228b22] bg-white
