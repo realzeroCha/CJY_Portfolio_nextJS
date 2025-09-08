@@ -1,5 +1,7 @@
-export const useAnimationEnd = (text: string, displayText: string) => {
-  if (typeof window === "undefined") return true;
+import { useMemo } from "react";
 
-  return text === displayText;
+export const useAnimationEnd = (text: string, displayText: string) => {
+  return useMemo(() => {
+    return text === displayText;
+  }, [text, displayText]);
 };

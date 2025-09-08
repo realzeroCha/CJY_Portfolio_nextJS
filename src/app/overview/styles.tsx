@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { TitleProps } from "./types";
+import { TitleOverviewProps, TitleProps } from "./types";
 import tw from "tailwind-styled-components";
 
 // page
@@ -8,42 +7,17 @@ export const OverviewWrap = tw.main`relative flex h-[50vh] whitespace-pre-line s
 // OverviewTitle
 export const Cursor = tw.span`inline-block w-[1ch] blinking`;
 
-export const Title = styled.h1<TitleProps>`
-  position: relative;
-  width: 100%;
-  margin-top: 20%;
-  font-weight: 900;
-  color: ${(p) => (p.$isEnd ? "transparent" : p.theme.text)};
-  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR",
-    sans-serif;
-  -webkit-text-stroke: ${(p) => (p.$isEnd ? "3px" : "0px")}
-    ${({ theme }) => theme.text};
-  transition: color 1s ease;
-  z-index: 1;
+export const Title = tw.h1<TitleProps>`
+  relative w-full mt-[20%] font-black z-[1] transition-colors duration-500 ease-in-out [font-family:'Apple_SD_Gothic_Neo','Malgun_Gothic','Noto_Sans_CJK_KR',sans-serif]
+  ${(p) =>
+    p.$isEnd
+      ? "text-transparent [-webkit-text-stroke:2px_black] dark:[-webkit-text-stroke:2px_white] md:[-webkit-text-stroke:3px_black] md:dark:[-webkit-text-stroke:3px_white]"
+      : `text-black dark:text-white [-webkit-text-stroke:0px_black] dark:[-webkit-text-stroke:0px_white]`}
+`;
 
-  @media (max-width: 900px) {
-    -webkit-text-stroke: ${(p) => (p.$isEnd ? "2px" : "0px")}
-      ${({ theme }) => theme.text};
-  }
-
-  &::before {
-    position: absolute;
-    left: -0.5rem;
-    transform: translateY(-2%);
-    content: "${(p) => (p.$isEnd ? "FRONT-END\\A CHA JINYOUNG" : "")}";
-    -webkit-text-stroke: 1px red;
-    opacity: 0.25;
-    animation: lineMove1 0.7s ease-in-out;
-    animation-delay: 2.5s;
-  }
-  &::after {
-    position: absolute;
-    top: 2%;
-    left: 0.5rem;
-    content: "${(p) => (p.$isEnd ? "FRONT-END\\A CHA JINYOUNG" : "")}";
-    -webkit-text-stroke: 1px blue;
-    opacity: 0.25;
-    animation: lineMove2 0.7s ease-in-out;
-    animation-delay: 2.5s;
-  }
+export const TitleOverlay = tw.span<TitleOverviewProps>`
+  absolute opacity-20 ${(p) =>
+    p.$type === 0
+      ? "-top-[1%] -left-2 [-webkit-text-stroke:1px_red] animate-[lineMove1_0.7s_ease-in-out_forwards]"
+      : "top-[1%] left-2 [-webkit-text-stroke:1px_blue] animate-[lineMove2_0.7s_ease-in-out_forwards]"}
 `;

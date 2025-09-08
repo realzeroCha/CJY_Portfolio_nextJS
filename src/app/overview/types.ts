@@ -7,3 +7,7 @@ export interface OverviewTitleProps {
   text: string;
   speed?: number;
 }
+
+export interface TitleOverviewProps {
+  $type: number;
+}
