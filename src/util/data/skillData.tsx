@@ -128,7 +128,7 @@ export const skillList: SkillListType[] = [
     skills: [
       {
         name: "MySQL",
-        url_path: "/images/svg/ic_mysql.svg",
+        url_path: "/images/svg/ic_mySQL.svg",
       },
       {
         name: "Redis",
