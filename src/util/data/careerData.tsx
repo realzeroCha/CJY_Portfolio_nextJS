@@ -7,6 +7,7 @@ export type CareerType = {
   career_title: string;
   url_path: string | null;
   career_period: string;
+  img_url?: string;
   descriptions: DescriptionType[] | string[];
 };
 
@@ -69,6 +70,7 @@ export const ProjectList: CareerListType = {
       career_title: "Dynamic-list",
       url_path: null,
       career_period: "2025.06 - 2025.08",
+      img_url: "/images/img/dynamicList.png",
       descriptions: [
         "React 라이브러리",
         "드래그 앤 드롭 기반의 동적인 변경이 가능한 리스트 제공",
@@ -78,6 +80,7 @@ export const ProjectList: CareerListType = {
       career_title: "포트폴리오 웹페이지",
       url_path: null,
       career_period: "2025.05 - 2025.08",
+      img_url: "/images/img/portfolio.png",
       descriptions: [
         "서버 사이드 렌더링(SSR)을 적용하여 검색엔진 최적화",
         "Three.js를 적용한 모델링 애니메이션 적용",
@@ -87,6 +90,7 @@ export const ProjectList: CareerListType = {
       career_title: "대학 통학 정보를 제공하는 애플리케이션",
       url_path: null,
       career_period: "2022.10 - 2023.05",
+      img_url: "/images/img/tong.png",
       descriptions: [
         "메트로 OPEN API를 통해 실시간 교통 상황 제공",
         "Google Maps API를 연동하여 지도 기반 데이터 제공",
