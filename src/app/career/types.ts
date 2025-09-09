@@ -18,3 +18,7 @@ export interface WorkProps {
 export interface DescriptionProps {
   description: string;
 }
+
+export interface FlipWrapProps {
+  $flippable: boolean;
+}

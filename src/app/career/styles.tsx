@@ -1,5 +1,5 @@
 import tw from "tailwind-styled-components";
-import { CareerWorkWrapProps } from "./types";
+import { CareerWorkWrapProps, FlipWrapProps } from "./types";
 
 // Career
 export const CareerWrap = tw.div`flex flex-col py-8 gap-20`;
@@ -20,27 +20,30 @@ export const CareerWorkContent = tw.p`text-[0.7rem] font-normal text-[#555] dark
 // careerItem
 export const CareerListWrap = tw.div`flex flex-col gap-6 space`;
 export const CareerTitle = tw.h4`text-black dark:text-white`;
-export const CareerItemWrap = tw.article`flex flex-col gap-2 p-2 bg-white dark:bg-[#222222] shadow-xl rounded-[10] sm:p-6`;
+export const CareerItemWrap = tw.article`flex flex-col gap-2 p-3 bg-white dark:bg-[#222222] shadow-xl rounded-md sm:p-6`;
 export const CareerItemTitle = tw.h5`text-black dark:text-white`;
 export const CareerItemPeriod = tw.p`text-[#999999] dark:text-[#cecece]`;
 export const CareerDescriptionWrap = tw.div`flex flex-col gap-[10vh] px-3 pt-[10vh] pb-10 break-words sm:px-4 sm:gap-[20vh]`;
 export const ProjectDescriptionWrap = tw.div`flex flex-col gap-2 m-1 px-3 break-words sm:px-4`;
 
+export const ProjectListWrap = tw.div`grid gap-4 lg:grid-cols-2 lg:gap-6`;
+
 // flipCard
 export const PerspectiveContainer = tw.div`
     group perspective
 `;
-export const FlipInner = tw.div`
-  relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]
+export const FlipWrap = tw.div<FlipWrapProps>`
+  relative w-full h-full transition-transform duration-700 preserve-3d ${(p) =>
+    p.$flippable ? "group-hover:[transform:rotateX(180deg)]" : ""}
 `;
 export const FrontItem = tw.div`
-    relative w-full h-full bg-white rounded-xl bg-white [backface-visibility:hidden]
+    relative w-full h-full rounded-md backface-hidden
 `;
 export const BackItem = tw.div`
-   absolute inset-0 flex items-center justify-center bg-gray-900 text-white rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]
+   absolute inset-0 flex items-center justify-center bg-white dark:bg-[#222222] rounded-md backface-hidden flip-x
 `;
 export const BackImg = tw.img`
-    h-full object-cover
+    w-[70%] h-full object-cover
 `;
 
 // careerDescription

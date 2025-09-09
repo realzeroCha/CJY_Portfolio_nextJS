@@ -9,10 +9,11 @@ import {
   CareerItemWrap,
   CareerListWrap,
   CareerTitle,
-  FlipInner,
+  FlipWrap,
   FrontItem,
   PerspectiveContainer,
   ProjectDescriptionWrap,
+  ProjectListWrap,
 } from "./styles";
 import { CareerItemProps } from "./types";
 
@@ -20,47 +21,49 @@ const ProjectItem = ({ list }: CareerItemProps) => {
   return (
     <CareerListWrap>
       <CareerTitle>{list.title}</CareerTitle>
-      {list.careers.map((career, career_idx) => (
-        <PerspectiveContainer key={`${career.career_title}`}>
-          <FlipInner>
-            <FrontItem>
-              <CareerItemWrap>
-                <RowWrap>
-                  {career.url_path && (
-                    <Image
-                      src={career.url_path}
-                      width={36}
-                      height={36}
-                      alt={career.career_title}
-                    />
+      <ProjectListWrap>
+        {list.careers.map((career, career_idx) => (
+          <PerspectiveContainer key={`${career.career_title}`}>
+            <FlipWrap $flippable={!!career.img_url}>
+              <FrontItem>
+                <CareerItemWrap>
+                  <RowWrap>
+                    {career.url_path && (
+                      <Image
+                        src={career.url_path}
+                        width={36}
+                        height={36}
+                        alt={career.career_title}
+                      />
+                    )}
+                    <CareerItemTitle>{career.career_title}</CareerItemTitle>
+                  </RowWrap>
+                  {career.career_period && (
+                    <CareerItemPeriod>{career.career_period}</CareerItemPeriod>
                   )}
-                  <CareerItemTitle>{career.career_title}</CareerItemTitle>
-                </RowWrap>
-                {career.career_period && (
-                  <CareerItemPeriod>{career.career_period}</CareerItemPeriod>
-                )}
-                <ProjectDescriptionWrap>
-                  {career.descriptions.map((description, description_idx) => {
-                    return (
-                      typeof description === "string" && (
-                        <CareerDescription
-                          key={`${career_idx}_${description_idx}`}
-                          description={description}
-                        />
-                      )
-                    );
-                  })}
-                </ProjectDescriptionWrap>
-              </CareerItemWrap>
-            </FrontItem>
-            {career.img_url && (
+                  <ProjectDescriptionWrap>
+                    {career.descriptions.map((description, description_idx) => {
+                      return (
+                        typeof description === "string" && (
+                          <CareerDescription
+                            key={`${career_idx}_${description_idx}`}
+                            description={description}
+                          />
+                        )
+                      );
+                    })}
+                  </ProjectDescriptionWrap>
+                </CareerItemWrap>
+              </FrontItem>
               <BackItem>
-                <BackImg src={career.img_url} alt="project_img" />
+                {career.img_url && (
+                  <BackImg src={career.img_url} alt="project_img" />
+                )}
               </BackItem>
-            )}
-          </FlipInner>
-        </PerspectiveContainer>
-      ))}
+            </FlipWrap>
+          </PerspectiveContainer>
+        ))}
+      </ProjectListWrap>
     </CareerListWrap>
   );
 };

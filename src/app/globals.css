@@ -169,6 +169,10 @@ p {
   transform-style: preserve-3d;
 }
 
+.flip-x {
+  transform: rotateX(180deg);
+}
+
 .backface-hidden {
   backface-visibility: hidden;
 }

@@ -73,7 +73,7 @@ export const ProjectList: CareerListType = {
       img_url: "/images/img/dynamicList.png",
       descriptions: [
         "React 라이브러리",
-        "드래그 앤 드롭 기반의 동적인 변경이 가능한 리스트 제공",
+        "드래그 앤 드롭으로 동적 변경이 가능한 리스트 제공",
       ],
     },
     {
@@ -82,7 +82,7 @@ export const ProjectList: CareerListType = {
       career_period: "2025.05 - 2025.08",
       img_url: "/images/img/portfolio.png",
       descriptions: [
-        "서버 사이드 렌더링(SSR)을 적용하여 검색엔진 최적화",
+        "서버 사이드 렌더링을 적용하여 검색엔진 최적화",
         "Three.js를 적용한 모델링 애니메이션 적용",
       ],
     },
@@ -92,18 +92,18 @@ export const ProjectList: CareerListType = {
       career_period: "2022.10 - 2023.05",
       img_url: "/images/img/tong.png",
       descriptions: [
-        "메트로 OPEN API를 통해 실시간 교통 상황 제공",
-        "Google Maps API를 연동하여 지도 기반 데이터 제공",
+        "OPEN API를 통해 실시간 교통 상황 제공",
+        "Google Maps API 연동으로 지도 데이터 제공",
         "WebSocket 실시간 채팅 기능 개발",
       ],
     },
     {
-      career_title: "스터디카페 결제 및 좌석대여 크로스플랫폼 애플리케이션",
+      career_title: "스터디카페 좌석대여 크로스플랫폼 애플리케이션",
       url_path: null,
       career_period: "2023.01 - 2023.03",
       descriptions: [
         "예약 좌석을 시각적으로 보여주어 UI/UX 개선",
-        "서버로부터 제공된 예약 가능 시간을 시각적으로 제공",
+        "예약 가능 시간을 시각적으로 제공",
       ],
     },
     {
