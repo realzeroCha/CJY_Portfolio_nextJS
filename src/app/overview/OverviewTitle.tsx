@@ -10,7 +10,7 @@ const OverviewTitle = ({ text, speed = 100 }: OverviewTitleProps) => {
   const { displayText } = useTypingEffect(text, speed);
   const animatedEnd = useAnimationEnd(text, displayText);
 
-  const [isAnimatedEnd, setIsAnimatedEnd] = useState<boolean>(true);
+  const [isAnimatedEnd, setIsAnimatedEnd] = useState<boolean>(false);
 
   const getText = () => {
     if (isAnimatedEnd) return text;
